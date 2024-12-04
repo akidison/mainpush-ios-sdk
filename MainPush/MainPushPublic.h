@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
+- (void)initialize;
+
 @property (nonatomic, weak) NSObject<PluginProtocol> * _Nullable modulesDelegate;
 
 @end

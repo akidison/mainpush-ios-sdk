@@ -18,4 +18,10 @@
     return sharedInstance;
 }
 
+- (void)initialize {
+    if ([MainPushPublic.sharedInstance.modulesDelegate respondsToSelector:@selector(initializePlugin)]) {
+        [MainPushPublic.sharedInstance.modulesDelegate initializePlugin];
+    }
+}
+
 @end

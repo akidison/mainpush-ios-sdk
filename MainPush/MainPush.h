@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <MainPush/MainPushPublic.h>
 //! Project version number for MainPush.
 FOUNDATION_EXPORT double MainPushVersionNumber;
 

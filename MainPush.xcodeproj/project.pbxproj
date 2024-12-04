@@ -15,6 +15,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			publicHeaders = (
 				MainPush.h,
+				MainPushPublic.h,
 			);
 			target = 44F827502D00EC1700F6958A /* MainPush */;
 		};
