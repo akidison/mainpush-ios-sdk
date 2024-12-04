@@ -23,6 +23,6 @@ Pod::Spec.new do |s|
 
   s.swift_versions = ['5.0']
 
-  s.source_files = 'RosPush/**/*.{h,m,swift}'
+  s.source_files = 'MainPush/**/*.{h,m,swift}'
 
 end
