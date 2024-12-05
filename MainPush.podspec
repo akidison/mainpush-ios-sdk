@@ -5,7 +5,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MainPush"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "Push notifications library by RosPush."
   s.platform     = :ios
 

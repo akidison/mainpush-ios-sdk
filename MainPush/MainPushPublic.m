@@ -19,8 +19,11 @@
 }
 
 - (void)initialize {
-    if ([MainPushPublic.sharedInstance.modulesDelegate respondsToSelector:@selector(initializePlugin)]) {
-        [MainPushPublic.sharedInstance.modulesDelegate initializePlugin];
+    if ([self.modulesDelegate respondsToSelector:@selector(initializePlugin)]) {
+        NSLog(@"[SDK A] Calling initializePlugin on modulesDelegate");
+        [self.modulesDelegate initializePlugin];
+    } else {
+        NSLog(@"[SDK A] modulesDelegate does not respond to initializePlugin");
     }
 }
 
