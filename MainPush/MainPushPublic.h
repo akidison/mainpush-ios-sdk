@@ -9,9 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// Новый протокол для Гамаржоп СДК
 @protocol PluginProtocol <NSObject>
 
 - (void)initializePlugin;
+- (void)performUserId:(NSString *)newUserId;
 - (void)performAction;
 
 @end
@@ -20,7 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
-- (void)initialize;
+- (void)initialize; // типа инициализация Pushwoosh SDK
+
+- (void)userId:(NSString *)newUserId; // типа метод setUserId из Pushwoosh SDK
 
 @property (nonatomic, weak) NSObject<PluginProtocol> * _Nullable modulesDelegate;
 

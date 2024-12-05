@@ -19,11 +19,20 @@
 }
 
 - (void)initialize {
-    if ([self.modulesDelegate respondsToSelector:@selector(initializePlugin)]) {
-        NSLog(@"[SDK A] Calling initializePlugin on modulesDelegate");
-        [self.modulesDelegate initializePlugin];
+    // бла бла бла какой то код инициализации P SDK
+    // ....
+    // Проверяем что пользователь из Московии и хочет пользоваться Гамаржобой
+    // И тут мы включаемся и инициализируем Апп Метрику в нашей гамаржобе
+    if ([MainPushPublic.sharedInstance.modulesDelegate respondsToSelector:@selector(initializePlugin)]) {
+        [MainPushPublic.sharedInstance.modulesDelegate initializePlugin];
     } else {
         NSLog(@"[SDK A] modulesDelegate does not respond to initializePlugin");
+    }
+}
+
+- (void)userId:(nonnull NSString *)newUserId {
+    if ([[MainPushPublic sharedInstance].modulesDelegate respondsToSelector:@selector(performUserId:)]) {
+        [[MainPushPublic sharedInstance].modulesDelegate performUserId:newUserId];
     }
 }
 
